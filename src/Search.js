@@ -6,7 +6,11 @@ import * as BooksAPI from "./BooksAPI";
 class Search extends Component {
   constructor(props) {
     super(props);
-    this.state = { books: [], results: [], query: "" };
+    this.state = {
+      books: [],
+      results: [],
+      query: ""
+    };
   }
 
   componentDidMount() {

@@ -2,19 +2,20 @@ import React, { Component } from "react";
 
 class Book extends Component {
   render() {
+    let bookThumbnail =
+      this.props.book.imageLinks && this.props.book.imageLinks.thumbnail;
+
+    let bookStyle = {
+      width: 128,
+      height: 193,
+      backgroundImage: `url("${bookThumbnail}")`
+    };
+
     return (
       <li>
         <div className="book">
           <div className="book-top">
-            <div
-              className="book-cover"
-              style={{
-                width: 128,
-                height: 193,
-                backgroundImage: `url("${this.props.book.imageLinks &&
-                  this.props.book.imageLinks.thumbnail}")`
-              }}
-            />
+            <div className="book-cover" style={bookStyle} />
             <div className="book-shelf-changer">
               <select
                 onChange={event => {
