@@ -40,6 +40,12 @@ class Search extends Component {
       if (res.error) {
         return this.setState({ results: [] });
       } else {
+        res.forEach(b => {
+          let s = this.state.books.filter(book => book.id === b.id);
+          if (s[0]) {
+            b.shelf = s[0].shelf;
+          }
+        });
         return this.setState({ results: res });
       }
     });
