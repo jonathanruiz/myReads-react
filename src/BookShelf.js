@@ -33,6 +33,7 @@ class BookShelf extends Component {
           <h1>MyReads</h1>
         </div>
         <div className="list-books-content">
+          {/* TODO: Keep DRY in mind and dynamically create each shelf */}
           <Shelf
             updateBook={this.updateBook}
             name="Currently Reading"
