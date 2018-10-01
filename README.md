@@ -18,7 +18,7 @@ Make sure you have Node.js installed on your machine because you will need npm t
 
 3.  Install the dependencies using:
 
-    npm install
+        npm install
 
 4.  Run the app using (It should start running in port 3000):
 
